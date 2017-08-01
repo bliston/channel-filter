@@ -31,6 +31,7 @@ public:
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
+	Peels::MiddleLookAndFeel lookAndFeel;
     ChannelFilterAudioProcessor& processor;
 	AudioProcessorValueTreeState& valueTreeState;
 	Label midiChannelLabel;

@@ -18,6 +18,9 @@ ChannelFilterAudioProcessorEditor::ChannelFilterAudioProcessorEditor (ChannelFil
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
+
+	LookAndFeel::setDefaultLookAndFeel(&lookAndFeel);
+
 	midiChannelLabel.setText("Midi Channel", dontSendNotification);
 	addAndMakeVisible(midiChannelLabel);
 	addAndMakeVisible(midiChannelSlider);
@@ -32,6 +35,8 @@ ChannelFilterAudioProcessorEditor::~ChannelFilterAudioProcessorEditor()
 //==============================================================================
 void ChannelFilterAudioProcessorEditor::paint (Graphics& g)
 {
+	g.setColour(Colours::white);
+	g.fillRect(getLocalBounds());
 }
 
 void ChannelFilterAudioProcessorEditor::resized()
